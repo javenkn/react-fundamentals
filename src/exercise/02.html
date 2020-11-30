@@ -9,10 +9,17 @@
 
   <script type="module">
     const rootElement = document.getElementById('root')
-    const element = React.createElement('div', {
-      className: 'container',
-      children: 'Hello World',
-    })
+    const helloElement = React.createElement('span', null, 'Hello')
+    const worldElement = React.createElement('span', null, 'World')
+    const element = React.createElement(
+      'div',
+      {
+        className: 'container',
+      },
+      helloElement,
+      ' ',
+      worldElement,
+    )
     ReactDOM.render(element, rootElement)
   </script>
 </body>
